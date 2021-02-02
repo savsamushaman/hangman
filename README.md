@@ -1,2 +1,3 @@
-# smaller_projects
-Projects I made for fun and not forgetting to code
+A game of hangman,
+Currently there is no user interface,
+the game is played through command line interactions
