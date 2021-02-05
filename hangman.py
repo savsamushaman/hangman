@@ -11,7 +11,7 @@ def update_dict():
 
 
 def game_loop():
-    "Starts the game."
+    """Starts the game."""
 
     def print_word(a_list, a_guess):
         for i in a_list:
@@ -60,14 +60,20 @@ def game_loop():
         print(f'\nYou lost. The word was : {original_word}')
 
 
-print("""Hello player !
-This is a hangman game.""")
+if __name__ == '__main__':
 
-while True:
-    print('\nStart new game ?')
-    user_response = input('1 - yes/ 0 - no : ')
-    if user_response == '1':
-        print('\nLet\'s play then. I\'m thinking about a word.\n')
-        game_loop()
-    elif user_response == '0':
-        break
+    print("""Hello player !
+    This is a hangman game.""")
+
+    update = input('Do you want to update the dictionary to the latest version ?')
+    if update:
+        update_dict()
+
+    while True:
+        print('\nStart new game ?')
+        user_response = input('1 - yes/ 0 - no : ')
+        if user_response == '1':
+            print('\nLet\'s play then. I\'m thinking about a word.\n')
+            game_loop()
+        elif user_response == '0':
+            break
